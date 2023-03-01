@@ -1,0 +1,65 @@
+.contact {
+
+   display: flex;
+   flex-direction: column;
+   gap: 53px;
+
+   &__title {
+      font-family: "Rubik", serif;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+   }
+
+   &__item {
+
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+   }
+}
+.contact .item {
+
+   &__title {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em
+   }
+
+   &__text {
+      font-family: "Rubik", serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+      text-decoration-line: underline;
+   }
+}
+
+@media (max-width: 1100px) {
+   .contact {
+
+      gap: 25px;
+
+		&__title {
+         font-size: calc(48*0.7px);
+      }
+
+		&__item {
+         gap: 12px;
+      }
+   }
+   .contact .item {
+
+		&__title {
+         font-size: calc(32*0.7px);
+      }
+
+		&__text {
+         font-size: calc(24*0.7px);
+      }
+   }
+
+}

@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+   font-family: "Bahnschrift";
+   font-style: normal;
+   font-weight: 400;
+   src: local("Bahnschrift"),
+        url("/fonts/Bahnschrift.ttf") format("ttf"),
+ }
+
+html {
+   background-color: #000000;
+   color: #fff;
+   font-family: "Bahnschrift", sans-serif;
+   font-size: 16px;
+   overflow-x: hidden;
+}
+
+.no-scroll {
+   overflow: hidden;
+}
+
+// section {
+//    border: 1px solid #f50505;
+// }
+
+.wrapper {
+   margin: 0 auto;
+   padding: 0 45px;
+   max-width: 1270px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   gap: 25px;
+}
+
+.content {
+   max-width: 73%;
+   padding-top: 14vh;
+   padding-bottom: 14vh;
+   display: inline-flex;
+   flex-direction: column;
+   gap: 210px;
+}
+
+.nav {
+   width: 26%;
+   position: -webkit-sticky;
+   position: sticky;
+   z-index: 100;
+   top: 14vh;
+   right: 0;
+   align-self: start;
+   flex-shrink: 1;
+   // border: 1px solid #05f565;
+}
+
+
+@import "_nav.scss";
+@import "_home.scss";
+@import "_services-and-skills.scss";
+@import "_portfolio.scss";
+@import "_contact.scss";
+
+@media (max-width: 1100px) {
+   .wrapper {
+      max-width: 950px;
+   }
+   .content {
+      gap: 165px;
+      padding-top: 105px;
+   }
+   .nav {
+      top: 105px;
+   }
+}
+
+@media (max-width: 950px) {
+   .wrapper {
+      gap: 15px;
+      padding: 0 25px;
+   }
+   .content {
+      gap: 105px;
+   }
+}
+
+@media (max-width: 650px) {
+   .wrapper {
+      padding: 0 20px;
+      flex-direction: column;
+   }
+   .content {
+      padding-top: 150px;
+      max-width: 100%;
+   }
+   .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+   }
+}

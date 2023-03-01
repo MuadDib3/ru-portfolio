@@ -1,0 +1,180 @@
+.portfolio {
+
+   display: flex;
+   flex-direction: column;
+   gap: 53px;
+
+   &__title {
+      font-family: "Rubik", serif;
+      font-weight: 400;
+      font-size: 48px;
+      line-height: 100%;
+      letter-spacing: 0.01em;
+   }
+
+   &__landings {
+      display: flex;
+      flex-direction: column;
+      gap: 53px;
+   }
+
+   &__stores {
+      display: flex;
+      flex-direction: column;
+      gap: 53px;
+   }
+}
+.landings, .stores {
+
+   &__title {
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+   }
+
+   &__more {
+      margin-top: -35px;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;
+      text-decoration-line: underline;
+      align-self: center;
+   }
+}
+
+.portfolio .item {
+
+   &__title {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 108.5%;
+      letter-spacing: 0.01em;
+      &:before {
+         content: "";
+         display: inline-block;
+         width: 15px;
+         height: 15px;
+         margin-right: 18px;
+         background-color: #fff;
+         border-radius: 15px;
+      }
+   }
+
+   &__descr {
+      padding-left: 33px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120.5%;
+      letter-spacing: 0.01em;
+      a {
+         text-decoration: underline;
+      }
+   }
+
+   &__galery {
+      padding-left: 33px;
+      max-width: 100%;
+   }
+}
+
+.galery__swiper {
+   margin: 0;
+   width: 100%;
+   min-width: 0;
+}
+.swiper {
+   max-width: 100%;
+   width: 100%;
+   height: auto;
+ }
+  
+.swiper-button-next {
+   width: 35px;
+   &:after {
+      content: "none";
+      width: 35px;
+      background-image: url(/img/arrow.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      transform: rotate(90deg);
+   }
+}
+
+
+.swiper-button-prev {
+   width: 35px;
+   &:after {
+      content: "none";
+      width: 35px;
+      background-image: url(/img/arrow.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: 50%;
+      transform: rotate(-90deg);
+   }
+}
+
+@media (max-width: 1100px) {
+.portfolio {
+
+   gap: 25px;
+
+		&__title {
+         font-size: calc(48*0.7px);
+      }
+
+		&__landings {
+         gap: 25px;
+      }
+
+		&__stores {
+         gap: 25px;
+      }
+}
+.landings, .stores {
+
+		&__title {
+         font-size: calc(32*0.7px);
+      }
+
+		&__item {
+         gap: 12px;
+      }
+
+		&__more {
+         font-size: calc(32*0.7px);
+         margin-top: calc(-35*0.6px);
+      }
+}
+   .portfolio .item {
+
+		&__title {
+         font-size: calc(24*0.7px);
+         &:before {
+            width: 11px;
+            height: 11px;
+            margin-right: 12px;
+            background-color: #fff;
+            border-radius: 11px;
+         }
+      }
+
+		&__descr {
+         font-size: calc(20*0.7px);
+         padding-left: 23px;
+      }
+
+		&__galery {
+         padding-left: 23px;
+      }
+   } 
+}
